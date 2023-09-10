@@ -1,0 +1,699 @@
+{
+  "info": {
+    "_postman_id": "c94e9b7b-e578-4376-9349-47d6e5c0a6c3",
+    "name": "payout",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "6718381",
+    "_collection_link": "https://restless-flare-6843.postman.co/workspace/payout.cashand.in~cfb2c909-ce58-4cd2-b20b-f92ca0201b45/collection/6718381-c94e9b7b-e578-4376-9349-47d6e5c0a6c3?action=share&creator=6718381&source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Merchant",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n            \"fname\":\"Suryakanta\",\r\n            \"mname\":\"\",\r\n            \"lname\":\"Sahani\",\r\n            \"contact\":\"7008293399\",\r\n            \"email\":\"suryakanta.office33@gmail.com\",\r\n            \"pan\":\"LVAPS3296J\",\r\n            \"aadhaar\":\"869523015698\",\r\n            \"dob\":\"1998-06-13\",\r\n            \"gender\":\"m\",\r\n            \"business_name\":\"Cashand Mitra\",\r\n            \"customer_address\":\"Patia,Bhubaneswar\",\r\n            \"customer_address_pincode\":\"751024\",\r\n            \"customer_address_street\":\"patia\",\r\n            \"customer_address_landmark\":\"patia\",\r\n            \"customer_address_city\":\"Bhubaneswar\",\r\n            \"customer_address_state\":\"Odisha\",\r\n            \"customer_address_district\":\"Khordha\",\r\n            \"business_address_pincode\":\"751024\",\r\n            \"business_address_street\":\"patia\",\r\n            \"business_address_city\":\"patia\",\r\n            \"business_address_state\":\"Odisha\",\r\n            \"business_address_district\":\"Khordha\",\r\n            \"business_address_landmark\":\"patia\",\r\n            \"business_address\":\"Patia,Bhubaneswar\",\r\n            \"latitude\":\"20.371866\",\r\n            \"longitude\":\"20.371866\",\r\n            \"ip_address\":\"192.168.1.23\",\r\n            \"userRefNo\":\"1523\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{testUrl}}merchant/register",
+              "host": ["{{testUrl}}merchant"],
+              "path": ["register"]
+            }
+          },
+          "response": [
+            {
+              "name": "register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n            \"fname\":\"Suryakanta\",\r\n            \"mname\":\"\",\r\n            \"lname\":\"Sahani\",\r\n            \"contact\":\"7008293399\",\r\n            \"email\":\"suryakanta.office33@gmail.com\",\r\n            \"pan\":\"LVAPS3296J\",\r\n            \"aadhaar\":\"869523015698\",\r\n            \"dob\":\"1998-06-13\",\r\n            \"gender\":\"m\",\r\n            \"business_name\":\"Cashand Mitra\",\r\n            \"customer_address\":\"Patia,Bhubaneswar\",\r\n            \"customer_address_pincode\":\"751024\",\r\n            \"customer_address_street\":\"patia\",\r\n            \"customer_address_landmark\":\"patia\",\r\n            \"customer_address_city\":\"Bhubaneswar\",\r\n            \"customer_address_state\":\"Odisha\",\r\n            \"customer_address_district\":\"Khordha\",\r\n            \"business_address_pincode\":\"751024\",\r\n            \"business_address_street\":\"patia\",\r\n            \"business_address_city\":\"patia\",\r\n            \"business_address_state\":\"Odisha\",\r\n            \"business_address_district\":\"Khordha\",\r\n            \"business_address_landmark\":\"patia\",\r\n            \"business_address\":\"Patia,Bhubaneswar\",\r\n            \"latitude\":\"20.371866\",\r\n            \"longitude\":\"20.371866\",\r\n            \"ip_address\":\"192.168.1.23\",\r\n            \"userRefNo\":\"1523\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{testUrl}}merchant/register",
+                  "host": ["{{testUrl}}merchant"],
+                  "path": ["register"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 21 May 2023 13:51:50 GMT"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 21 May 2023 13:51:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.1.10"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "59"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": \"Merchant onboarded successful.\",\n    \"data\": {\n        \"merchantId\": \"d33fc518-f1ed-4290-9fa0-369662f24b68\",\n        \"status\": \"A\",\n        \"userRedNo\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"merchantId\":\"d33fc518-f1ed-4290-9fa0-369662f24b68\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{testUrl}}merchant/auth",
+              "host": ["{{testUrl}}merchant"],
+              "path": ["auth"]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5OTJmZTRiYS02NTA3LTQ5YmEtOTVkZC1hZWU2OWIyYTIwMGUiLCJqdGkiOiJjODVhMjJiM2ZkNTM3NTM5MGU4NTAzOThkYTkxYmE1ZGIyZjY4N2NhNmJhMTNkNjJjZjE5ODc1MmY4ZjE3ZGQ1YjQ4NzQzMTMyNGY2ODQ4ZiIsImlhdCI6MTY4NDgyMjI0Mi40MjQ5MjEsIm5iZiI6MTY4NDgyMjI0Mi40MjQ5MjksImV4cCI6MTY4NDkwODY0Mi4yMzUxOTIsInN1YiI6IjhlNTM2ZDkxLWNmMzUtNGYwZC1hYTdjLTYxN2MzNjBiZTZhYiIsInNjb3BlcyI6W119.qSdxwXiOqabq06_xF0lc93oD9gxxLmHsFsesW89f_4xhD1ctZhFC0StGRWS8eMotC655Uu4hX1Nj8YGMndQj_q2eSECny8wxsOoas5krGTehJJPmiJ-9JZZlTJt0ywP1NSiOVh73VuXDG2APL3hsnwFron3VUcqQZPZfwT11dsBnma7jxbGDI8STkQyMO7GWaZghbye9ddN2WBVE_Mn4MnVq-jSc6BCtIThepZsx2_YrK1bbWgFtcLNuZubHr64yK6Bky9suBOyEDK5elntVcJq7-W5ZmeRx2iDWzfft1ZLMjg_06cnKf4IZPwL4W6smetQDlxQC0c9aVd7QR49Yo87PwTqhFHA5F-DyQ5CqFchSOPtr0Huo1-hTYZIJz6c3xsGajEY6qlkNFx7F-TaK2_f7OHTiKXPcniJ-sy_G8O0WaRWqAPI0TEko25OkY5XABHYZqiG1xQ4OLB6VRzA5NLrPsyUivUOVN7MChFnctc-yYUfE2VA3s8zBmrvEcog0Qua2Ltr7oZUHo2k-8PdId_03svJLNicjbIGUwL3deXuWGAFMooYzwz3VjzirGsPJxYh3Gm9o-pm-8unp-ZFNoHKoITgty-NujVYQfhRtAxFIHvFb66u8ska5jNcyFp-1T_CDiiSDR7xInW0SBk9vOAbIFyOf4CFKHz-Y26iPjok",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [""]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [""]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "appId",
+                "value": "{{appId}}",
+                "type": "text"
+              },
+              {
+                "key": "appSecret",
+                "value": "{{appSecret}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{testUrl}}admin/login",
+              "host": ["{{testUrl}}admin"],
+              "path": ["login"]
+            }
+          },
+          "response": [
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "appId",
+                    "value": "{{appId}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "appSecret",
+                    "value": "{{appSecret}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{testUrl}}admin/login",
+                  "host": ["{{testUrl}}admin"],
+                  "path": ["login"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 20 May 2023 09:18:38 GMT"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 20 May 2023 09:18:38 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.1.10"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "58"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": \"User Authorized\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5OTJmZTRiYS02NTA3LTQ5YmEtOTVkZC1hZWU2OWIyYTIwMGUiLCJqdGkiOiI2YzdhZTA5Yzk2YzM5Y2E5YzJkZmU4ZTVmYTk1YmQwOTI2ZWRmMzg3NmQ2OGEzNjMzNjE2N2ViM2M0MTFmMmMxOTY0ZDVhMWMxNzFmYzYzYyIsImlhdCI6MTY4NDU3NDMxOC4xNTIxMTksIm5iZiI6MTY4NDU3NDMxOC4xNTIxMjIsImV4cCI6MTY4NDU3NzkxNy45MTMyNzUsInN1YiI6IjhlNTM2ZDkxLWNmMzUtNGYwZC1hYTdjLTYxN2MzNjBiZTZhYiIsInNjb3BlcyI6W119.k5v5iROpxV_DP7H_SBnnNzgepZM0-DH3OnabT5h8VtiMJ3RKNM5bo2ch6UTDiD30Wd4iAqc8qgDo1XljGIFGVRduHqVoKlaQFKyhoZWf1uENxYQQT2ghLlBdDLycFhR5_G8xvrl0B2dKqg_J-O5exuAhFGun7fxa0P6x0kqPqQofcBWlvCcQbOkR-WtOFCTTjZF679JnO6D6QZz1SRTbftP80h2DEdD0C4SBkQB8CQV6pCL8oRegelOcbKzT-IanU1G3seRMZ6kdmQrCrJsCOg3PA_TqtFisa7EVLs7zg_EwWhkLLATnIvCAYqhzAdm_VIlXOR9q277gUXbtbKccEph4LFdRRgDKrluFeJt6cZRgfqlAJsIQKe9Rq0geofk4aNAnvq-ZjjrAUqU92msiRjtgCjlzvvhKjv3qJq2r37cilPa2plajf7fVAonnj4G7rcIPVWqxzft8Hc6pqROiuBxORW1Cb2wI3lPKM3x4OiPx1vSLvPDwEra96YHyxSb9oSWrHoJdmBIwoFEbIS4FCmK38NhbHRMmMxpLLSlJiKbtoGkAZuomO-_E7G_qZRFAEuNauGoiWWfFxXArtJf0CAxkuxWLlXLvfXQiiCBcLb9FjVLZdgL3NzgEZTF1qMS89pJFjc_2fhRkJcSvVUy0ESCHpf2f6QbTJ5XX8zgRt6s\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "walletTopUp",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"amount\":100,\r\n    \"transaction_ref_no\":1,\r\n    \"transaction_type\":\"wallet_top_up\",\r\n    \"operation\":\"cr\",\r\n    \"transaction_date\":\"2023-05-23\",\r\n    \"remark\":\"Test transaction\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{testUrl}}wallet/addFund",
+              "host": ["{{testUrl}}wallet"],
+              "path": ["addFund"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transaction",
+      "item": [
+        {
+          "name": "Add Bene",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ifsc\":\"SBIN0006394\",\r\n    \"account\":20202689570,\r\n    \"bene_name\":\"Gurubachan Singh\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{testUrl}}transaction/addBene",
+              "host": ["{{testUrl}}transaction"],
+              "path": ["addBene"]
+            }
+          },
+          "response": [
+            {
+              "name": "addBene",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"ifsc\":\"SBIN0006394\",\r\n    \"account\":20202689570,\r\n    \"bene_name\":\"Gurubachan Singh\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{testUrl}}transaction/addBene",
+                  "host": ["{{testUrl}}transaction"],
+                  "path": ["addBene"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 23 May 2023 06:12:28 GMT"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 23 May 2023 06:12:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.1.10"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "58"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": \"Bene Created\",\n    \"data\": {\n        \"ifsc\": \"SBIN0006394\",\n        \"account_number\": 20202689570,\n        \"bene_name\": \"Gurubachan Singh\",\n        \"mid\": \"d33fc518-f1ed-4290-9fa0-369662f24b68\",\n        \"id\": \"06ba1c87-f07b-4f68-a2d6-d044dcddde6e\",\n        \"updated_at\": \"2023-05-23T06:12:28.000000Z\",\n        \"created_at\": \"2023-05-23T06:12:28.000000Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "get Bene",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{testUrl}}transaction/fetch",
+              "host": ["{{testUrl}}transaction"],
+              "path": ["fetch"]
+            }
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{testUrl}}transaction/fetch",
+                  "host": ["{{testUrl}}transaction"],
+                  "path": ["fetch"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 23 May 2023 06:13:36 GMT"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 23 May 2023 06:13:36 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.1.10"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "59"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": \"Bene fetched\",\n    \"data\": [\n        {\n            \"id\": \"06ba1c87-f07b-4f68-a2d6-d044dcddde6e\",\n            \"ifsc\": \"SBIN0006394\",\n            \"account_number\": \"20202689570\",\n            \"bene_name\": \"Gurubachan Singh\",\n            \"mid\": \"d33fc518-f1ed-4290-9fa0-369662f24b68\",\n            \"bene_verified_at\": \"2023-05-23 06:12:27\",\n            \"verification_status\": \"pending\",\n            \"bank_response\": null,\n            \"created_at\": \"2023-05-23T06:12:28.000000Z\",\n            \"updated_at\": \"2023-05-23T06:12:28.000000Z\",\n            \"isActive\": 1\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "payout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"beneId\":\"06ba1c87-f07b-4f68-a2d6-d044dcddde6e\",\r\n    \"amount\":1,\r\n    \"mode\":1,\r\n    \"purpose\":\"payout\",\r\n    \"reference_id\":\"test_1\",\r\n    \"narration\":\"test_payout\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{testUrl}}payout/init",
+              "host": ["{{testUrl}}payout"],
+              "path": ["init"]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5OTJmZTRiYS02NTA3LTQ5YmEtOTVkZC1hZWU2OWIyYTIwMGUiLCJqdGkiOiI3MzFhZjQwNTI5MWM3NDJjYjkyMzBjNjYxMmEzZTA5NTY1ZWQxNjFiNWY3MTAyZmQ4YzkxZDhkNjFkN2UwODhmYTcyOWY2NTFmODY0ZTUzNCIsImlhdCI6MTY4NDgyMjI4NC40NTQxMzksIm5iZiI6MTY4NDgyMjI4NC40NTQxNDEsImV4cCI6MTY4NDkwODY4NC4zMjAwMTgsInN1YiI6ImQzM2ZjNTE4LWYxZWQtNDI5MC05ZmEwLTM2OTY2MmYyNGI2OCIsInNjb3BlcyI6W119.fdrafwGirtqFmOV0443po94DT-DOn1cOCklM9zA0iI88yOkvsqdoNE9sflvmfi3w14e4cCCj_s0TWu3AouI_to0Ayv3hc_c8s-aI4-6MYSBv7ZCyIPZ_JRt4SaJQPmXSQfkcLifNTELExoDLG8I0taYrU4P28UnUtJKiARM9gcg7zd-DbzAMDAg-6LEjS6FZqhX1cYE_oj4Y-s-gNfYmRk-f67LoCmqa2bVwr8yROxVPmvHTscKGIhWYvyJHNgnecO3TEg8l3S7mTtUA_QJaUMEQkSrMqoHJY4GXqEe4gAQUaKGJCEYJte65BiviPYvQ5LzVaT0gpkCwRo5DDvJMtKE2qGoVabaIXlyBsa3msgx0CujqzGFe0LcvDZEtjeYgogEvDqpS1zFbiCnOzDqCyvAOUZwk_vWih_xB1OwyFYeOqXq52wkMv5dg537hshIl5QhlomTsVdqPBhsdfONsnsEkiOZvrqNpfH2eSKoK9IW3-h02-KJDYVt_XDE1QoWniIVG0DsuvSLxTnw1lBIn5PVV3SQsSez67QekrYc_AUsUfwxgbGF5g4luFOuJ1iZhvDQ74edkKkeeESoPixq3xrTfzhNmh9WeVIh6jIMgCXcLPmsI74r6llIFNXi5vPcytwb_PjdWo2CeLq9R8_itdUIIdJFoBwsz2lo8MoNmKGk",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [""]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [""]
+          }
+        }
+      ]
+    },
+    {
+      "name": "state",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{testUrl}}state",
+          "host": ["{{testUrl}}state"]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{testUrl}}state",
+              "host": ["{{testUrl}}state"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 20 May 2023 03:35:48 GMT"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 20 May 2023 03:35:48 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.1.10"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-RateLimit-Limit",
+              "value": "60"
+            },
+            {
+              "key": "X-RateLimit-Remaining",
+              "value": "58"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"state\": \"Andaman Nicobar\"\n    },\n    {\n        \"id\": 2,\n        \"state\": \"Andhra Pradesh\"\n    },\n    {\n        \"id\": 3,\n        \"state\": \"Arunachal Pradesh\"\n    },\n    {\n        \"id\": 4,\n        \"state\": \"Assam\"\n    },\n    {\n        \"id\": 5,\n        \"state\": \"Bihar\"\n    },\n    {\n        \"id\": 6,\n        \"state\": \"Chandigarh\"\n    },\n    {\n        \"id\": 7,\n        \"state\": \"Chhattisgarh\"\n    },\n    {\n        \"id\": 8,\n        \"state\": \"Dadra and Nagar Haveli and Daman and Diu\"\n    },\n    {\n        \"id\": 9,\n        \"state\": \"Delhi\"\n    },\n    {\n        \"id\": 10,\n        \"state\": \"Goa\"\n    },\n    {\n        \"id\": 11,\n        \"state\": \"Gujarat\"\n    },\n    {\n        \"id\": 12,\n        \"state\": \"Haryana\"\n    },\n    {\n        \"id\": 13,\n        \"state\": \"Himachal Pradesh\"\n    },\n    {\n        \"id\": 14,\n        \"state\": \"Jammu Kashmir\"\n    },\n    {\n        \"id\": 15,\n        \"state\": \"Jharkhand\"\n    },\n    {\n        \"id\": 16,\n        \"state\": \"Karnataka\"\n    },\n    {\n        \"id\": 17,\n        \"state\": \"Kerala\"\n    },\n    {\n        \"id\": 18,\n        \"state\": \"Ladakh\"\n    },\n    {\n        \"id\": 19,\n        \"state\": \"Lakshadweep\"\n    },\n    {\n        \"id\": 20,\n        \"state\": \"Madhya Pradesh\"\n    },\n    {\n        \"id\": 21,\n        \"state\": \"Maharashtra\"\n    },\n    {\n        \"id\": 22,\n        \"state\": \"Manipur\"\n    },\n    {\n        \"id\": 23,\n        \"state\": \"Meghalaya\"\n    },\n    {\n        \"id\": 24,\n        \"state\": \"Mizoram\"\n    },\n    {\n        \"id\": 25,\n        \"state\": \"Nagaland\"\n    },\n    {\n        \"id\": 26,\n        \"state\": \"Odisha\"\n    },\n    {\n        \"id\": 27,\n        \"state\": \"Puducherry\"\n    },\n    {\n        \"id\": 28,\n        \"state\": \"Punjab\"\n    },\n    {\n        \"id\": 29,\n        \"state\": \"Rajasthan\"\n    },\n    {\n        \"id\": 30,\n        \"state\": \"Sikkim\"\n    },\n    {\n        \"id\": 31,\n        \"state\": \"Tamil Nadu\"\n    },\n    {\n        \"id\": 32,\n        \"state\": \"Telangana\"\n    },\n    {\n        \"id\": 33,\n        \"state\": \"Tripura\"\n    },\n    {\n        \"id\": 34,\n        \"state\": \"Uttar Pradesh\"\n    },\n    {\n        \"id\": 35,\n        \"state\": \"Uttarakhand\"\n    },\n    {\n        \"id\": 36,\n        \"state\": \"West Bengal\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "district",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{testUrl}}district/26",
+          "host": ["{{testUrl}}district"],
+          "path": ["26"]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{testUrl}}district/26",
+              "host": ["{{testUrl}}district"],
+              "path": ["26"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 20 May 2023 03:40:59 GMT"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 20 May 2023 03:40:59 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.1.10"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-RateLimit-Limit",
+              "value": "60"
+            },
+            {
+              "key": "X-RateLimit-Remaining",
+              "value": "58"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 483,\n        \"district\": \"Angul\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 484,\n        \"district\": \"Balangir\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 485,\n        \"district\": \"Balasore\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 486,\n        \"district\": \"Bargarh\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 487,\n        \"district\": \"Bhadrak\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 488,\n        \"district\": \"Boudh\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 489,\n        \"district\": \"Cuttack\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 490,\n        \"district\": \"Debagarh\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 491,\n        \"district\": \"Dhenkanal\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 492,\n        \"district\": \"Gajapati\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 493,\n        \"district\": \"Ganjam\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 494,\n        \"district\": \"Jagatsinghpur\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 495,\n        \"district\": \"Jajpur\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 496,\n        \"district\": \"Jharsuguda\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 497,\n        \"district\": \"Kalahandi\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 498,\n        \"district\": \"Kandhamal\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 499,\n        \"district\": \"Kendrapara\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 500,\n        \"district\": \"Kendujhar\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 501,\n        \"district\": \"Khordha\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 502,\n        \"district\": \"Koraput\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 503,\n        \"district\": \"Malkangiri\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 504,\n        \"district\": \"Mayurbhanj\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 505,\n        \"district\": \"Nabarangpur\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 506,\n        \"district\": \"Nayagarh\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 507,\n        \"district\": \"Nuapada\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 508,\n        \"district\": \"Puri\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 509,\n        \"district\": \"Rayagada\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 510,\n        \"district\": \"Sambalpur\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 511,\n        \"district\": \"Subarnapur\",\n        \"stateId\": 26\n    },\n    {\n        \"id\": 512,\n        \"district\": \"Sundergarh\",\n        \"stateId\": 26\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "getIp",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{testUrl}}getIp",
+          "host": ["{{testUrl}}getIp"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5OTJmZTRiYS02NTA3LTQ5YmEtOTVkZC1hZWU2OWIyYTIwMGUiLCJqdGkiOiJjODVhMjJiM2ZkNTM3NTM5MGU4NTAzOThkYTkxYmE1ZGIyZjY4N2NhNmJhMTNkNjJjZjE5ODc1MmY4ZjE3ZGQ1YjQ4NzQzMTMyNGY2ODQ4ZiIsImlhdCI6MTY4NDgyMjI0Mi40MjQ5MjEsIm5iZiI6MTY4NDgyMjI0Mi40MjQ5MjksImV4cCI6MTY4NDkwODY0Mi4yMzUxOTIsInN1YiI6IjhlNTM2ZDkxLWNmMzUtNGYwZC1hYTdjLTYxN2MzNjBiZTZhYiIsInNjb3BlcyI6W119.qSdxwXiOqabq06_xF0lc93oD9gxxLmHsFsesW89f_4xhD1ctZhFC0StGRWS8eMotC655Uu4hX1Nj8YGMndQj_q2eSECny8wxsOoas5krGTehJJPmiJ-9JZZlTJt0ywP1NSiOVh73VuXDG2APL3hsnwFron3VUcqQZPZfwT11dsBnma7jxbGDI8STkQyMO7GWaZghbye9ddN2WBVE_Mn4MnVq-jSc6BCtIThepZsx2_YrK1bbWgFtcLNuZubHr64yK6Bky9suBOyEDK5elntVcJq7-W5ZmeRx2iDWzfft1ZLMjg_06cnKf4IZPwL4W6smetQDlxQC0c9aVd7QR49Yo87PwTqhFHA5F-DyQ5CqFchSOPtr0Huo1-hTYZIJz6c3xsGajEY6qlkNFx7F-TaK2_f7OHTiKXPcniJ-sy_G8O0WaRWqAPI0TEko25OkY5XABHYZqiG1xQ4OLB6VRzA5NLrPsyUivUOVN7MChFnctc-yYUfE2VA3s8zBmrvEcog0Qua2Ltr7oZUHo2k-8PdId_03svJLNicjbIGUwL3deXuWGAFMooYzwz3VjzirGsPJxYh3Gm9o-pm-8unp-ZFNoHKoITgty-NujVYQfhRtAxFIHvFb66u8ska5jNcyFp-1T_CDiiSDR7xInW0SBk9vOAbIFyOf4CFKHz-Y26iPjok",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "testUrl",
+      "value": "http://127.0.0.1:8000/api/v1/",
+      "type": "string"
+    },
+    {
+      "key": "appSecret",
+      "value": "05b88d57008f3db2921dcf116b6559048d47f0f57d857daf82ee1080d6048277",
+      "type": "string"
+    },
+    {
+      "key": "appId",
+      "value": "5370faaf-682d-4211-b42a-61c8551ebb95",
+      "type": "string"
+    }
+  ]
+}
