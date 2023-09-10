@@ -6,15 +6,14 @@ const connection = mysql.createConnection(
         host: 'localhost',
         user: 'root',
         password: null,
-        database: 'demoOne',
+        database: 'UserProfileManager',
     }
 )
 
 const secret = 'my-secret'
 
 
-
-const roles = {
+const roles = {                        // defining routes in object and giving routes for demo purpose.
     'admin': ['/'],
     'subadmin': ['/upload'],
     'user': ['/getall'],
@@ -58,6 +57,7 @@ const login = (req, res) => {
         }
     })
 }
+
 
 const demoAuth = (req, res, next) => {
     const path = req.route.path;
@@ -155,7 +155,7 @@ const postRequest = (req, res) => {
     // const hashedPass = bcrypt.hash(toEncrypt,saltRounds)
     // console.log(hashedPass)
 
-    bcrypt.hash(toEncrypt, saltRounds, function (err, hash) {                      //always remeber that bcrypt will work only as functgion not as stated in the above line of code but only like this i think..
+    bcrypt.hash(toEncrypt, saltRounds, function (err, hash) {                      //always remeber that bcrypt will work only as function not as stated in the above line of code -(hashedPass) but only like this i think..
 
         const sql = `INSERT INTO profile1 (name, email, phone, password,role) VALUES(?,?,?,?,?)`;
         const values = [req.body.name, req.body.email, req.body.phone, hash];
@@ -191,35 +191,35 @@ const patchRequest = (req, res) => {
 
 
 //addnumber -enter a new number then add it to all the previous ones and then save that inside the column at last
-const addNum = (req, res) => {
-    const { num1, num2 } = req.body;
+// const addNum = (req, res) => {
+//     const { num1, num2 } = req.body;
 
-    connection.query('SELECT SUM(num1) AS a,SUM(num2) AS b FROM additions', (err, result) => {
-        if (err) {
-            console.log(err);
-        } else {
-            const n = result;
-            res.send(n)
-            const n1 = n[0].a;
-            console.log(n1);
-            const n2 = n[0].b;
-            console.log(n2)
+//     connection.query('SELECT SUM(num1) AS a,SUM(num2) AS b FROM additions', (err, result) => {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             const n = result;
+//             res.send(n)
+//             const n1 = n[0].a;
+//             console.log(n1);
+//             const n2 = n[0].b;
+//             console.log(n2)
 
-            const sql = 'INSERT INTO additions(num1,num2) values(?,?)';
-            values = [n1 + num1, n2 + num2];
-            connection.query(sql, values, (err, result) => {
-                if (err) {
-                    console.log(err);
-                }
-                else {
+//             const sql = 'INSERT INTO additions(num1,num2) values(?,?)';
+//             values = [n1 + num1, n2 + num2];
+//             connection.query(sql, values, (err, result) => {
+//                 if (err) {
+//                     console.log(err);
+//                 }
+//                 else {
 
-                    console.log('-------------------------------------------------------------')
-                }
-            })
-        }
-    })
+//                     console.log('-------------------------------------------------------------')
+//                 }
+//             })
+//         }
+//     })
 
-}
+// }
 
 
 // other approach to addnumber using forEach loop........................................
@@ -261,6 +261,7 @@ const addNum = (req, res) => {
 
 
 //file upload
+
 
 const uploadFile = async (req, res) => {
 
@@ -320,7 +321,7 @@ const functions = {
     login,
     protected,
     auth,
-    addNum,
+    // addNum,
     uploadFile,
     readFile,
     demoAuth

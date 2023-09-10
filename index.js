@@ -10,44 +10,19 @@ const server = express();
 server.use(bodyParser.urlencoded({ extended: true }));               //very imp for post request
 server.use(bodyParser.json());
 
-
-server.use('/', express.static('./uploads'));
-
-
-const connection = mysql.createConnection({
+const connection = mysql.createConnection({               // creating connection 
   host: 'localhost',
   user: 'root',
   password: null,
-  database: 'demoOne',
+  database: 'UserProfileManager',
 });
+
+server.use('/', express.static('./uploads'));                       // making uploads folder available for geting on client side.
 
 server.use(fileUpload({
   createParentPath: true
 }))
 
-
-// const createTable = () => {
-//   connection.query("CREATE table addNum(id INT NOT NULL primary key auto_increment,num1 int,num2 int", function (err) {
-//     if (err) {
-//       console.log(err)
-//     }
-//     else {
-//       console.log('created table')
-//     }
-//   })
-
-// }
-
-// const insertData = () => {
-//   connection.query("insert into add(num1,num2) values(3,3)", function (err) {
-//     if (err) {
-//       console.log(err)
-//     }
-//     else {
-//       console.log('data entered in table')
-//     }
-//   })
-// }
 
 
 connection.connect((err) => {
@@ -57,9 +32,10 @@ connection.connect((err) => {
     return;
   }
 
-  server.use(router);
+  server.use(router);                                    
 
-  // setTimeout(() => {
+  // setTimeout(() => {                                                   //just a test table for before test.
+  
   //   connection.query("CREATE TABLE additions ( id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, num1 INT, num2 INT);", function (err) {
   //     if (err) {
   //       console.log(err)
@@ -70,29 +46,12 @@ connection.connect((err) => {
   //   })
   // }, 2000)
 
-
-
-  // connection.query("INSERT INTO additions(num1,num2) values(3,3)", function (err) {
-  //   if (err) {
-  //     console.log(err)
-  //   }
-  //   else {
-  //     console.log('data entered in table')
-  //   }
-  // })
   console.log('Connected to MySQL!');
-
-
-
-
 });
 
 
-
-
-
 server.listen(8000, () => {
-  console.log('server started');
+  console.log('server started on PORT::8000');
 })
 
 
